@@ -3,6 +3,15 @@
 """
 A simple ‘Hello, World’ program in Python
 """
-print('Hello, World!')
-name = input("What's your name bro?: ")
-print("Well, hello there {0}!".format(name))
+
+def main():
+   """
+   Writes generic greeting, and then input a user name,
+   whom it also greets.
+   """
+   print('Hello, World!')
+   name = input("What's your name?: ")
+   print("Well, hello {0}!".format(name))
+
+if __name__ == '__main__':
+   main()
