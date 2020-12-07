@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-My Hello world program
-
+A simple ‘Hello, World’ program in Python
 """
-
-print ("hello, is it me you looking for?")
+print('Hello, World!')
+name = input("What's your name bro?: ")
+print("Well, hello there {0}!".format(name))
