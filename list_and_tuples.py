@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-os.system("bash --login")
 import sys
 
 
