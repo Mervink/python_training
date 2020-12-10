@@ -1,20 +1,31 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-A simple ‘Hello, World’ program in Python
-"""
-
 import sys
 
-def main():
-   """
-   Writes generic greeting, and then input a user name,
-   whom it also greets.
-   """
-   print('Hello, World!')
-   name = input("What's your name?: ")
-   print("Well, hello {0}!".format(name))
-   return 0
+def main(args):
+    '''
+    Calls `greet` function with command-line argument, or value
+    obtained from user input.
+    '''
+
+    if len(sys.argv) > 1:
+        subject = args[1]
+    else:
+        subject = input("Who to greet?: ")
+
+    greet(subject)
+
+    return 0
+
+
+def greet (who, salutation='Hello'):
+    '''
+    Writes a greeting to standard output. If `None` or and empty
+    string is passed, will use `World`.
+    '''
+    if not who or who is None:
+        who = 'World'
+
+    print(f'{salutation}, {who}!')
+
 
 if __name__ == '__main__':
-   sys.exit(main())
+    sys.exit(main(sys.argv))
